@@ -69,6 +69,7 @@ body{
 
 .right{
     margin: 16px 0;
+    position: relative;
 }
 
 .header {
@@ -164,3 +165,13 @@ body{
     font-size: 17px;
 }
 
+
+
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: #1a763d;
+    width: 100%;
+    padding: 12px;
+}
