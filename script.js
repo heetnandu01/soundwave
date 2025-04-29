@@ -23,10 +23,20 @@ async function main() {
     console.log(songs);
 
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
-    
+
     for (const song of songs) {
         let songName = song.split("/").pop().replaceAll("%20", " ");
-        songUL.innerHTML = songUL.innerHTML + `<li>${songName}</li>`;
+        songUL.innerHTML = songUL.innerHTML + `<li> <img class="invert" src="music.svg" alt="">
+                            <div class="info">
+                                <div> ${songName}</div>
+                                <div>Heet</div>
+                            </div>
+                            <div class="playnow">
+                                <span>Play Now</span>
+                                <img class="invert" src="play.svg" alt="">
+                            </div>
+                        </li>
+        `;
     }
 
     var audio = new Audio(songs[0]);
