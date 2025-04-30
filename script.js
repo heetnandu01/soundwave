@@ -19,8 +19,9 @@ async function getSongs() {
 }
 
 async function main() {
+    let currectSong;
     let songs = await getSongs();
-    console.log(songs);
+
 
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
 
@@ -34,17 +35,18 @@ async function main() {
                             <div class="playnow">
                                 <span>Play Now</span>
                                 <img class="invert" src="play.svg" alt="">
-                            </div>
-                        </li>
-        `;
+                            </div> </li>`;
     }
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
+        e.addEventListener("click",element=>{
+            console.log(e.querySelector(".info").firstElementChild.innerHTML)
+            playMusic(e.querySelector(".info").firstElementChild.innerHTML)
+        })
+    })
 
-    var audio = new Audio(songs[0]);
-    // audio.play(); // (you had commented it out)
 
-    audio.addEventListener("loadeddata", () => {
-        console.log(audio.duration, audio.currentSrc, audio.currentTime);
-    });
+
+
 }
 
 main();

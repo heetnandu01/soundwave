@@ -20,7 +20,7 @@ body {
     width: 75vw;
 }
 
-.home {}
+
 
 .home ul li {
     display: flex;
@@ -169,11 +169,15 @@ body {
 
 
 .playbar {
-    position: absolute;
-    bottom: 0;
-    background-color: #e6f7ec;
+    position: fixed;
+    bottom: 20px;
+   filter: invert(1);
+   background-color: #dad5d5;
+   border-radius: 10px;
     width: 90%;
     padding: 12px;
+    width: 70vw;
+    height: 40px;
 }
 
 .songbuttons {
@@ -183,8 +187,9 @@ body {
     gap: 10px;
 }
 .songlist{
-    height: 644px;
+    height: 544px;
     overflow: auto;
+    margin-bottom: 44px;
     
 }
 .songList ul li:last-child {
@@ -222,4 +227,25 @@ body {
 .playnow span {
     font-size: 15px;
     width: 64px;
+}
+
+.seekbar{
+    height: 2px;
+    width: 98%;
+    background:black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    margin: 6px;
+}
+
+.circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: black;
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.5s;
 }
